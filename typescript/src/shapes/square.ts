@@ -1,4 +1,9 @@
-function square(sideLen: number): Shape {
+import {Shape} from "./shape.js"
+
+interface Square extends Shape{
+    sideLen:number;
+}
+function newSquare(sideLen: number): Square {
     return {
         sideLen,
         computeArea: function (): number {
@@ -7,4 +12,4 @@ function square(sideLen: number): Shape {
     }
 }
 
-export { square }
+export { Square, newSquare }

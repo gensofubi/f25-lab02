@@ -1,7 +1,8 @@
-interface Rectangle {
+import {Shape} from "./shape.js"
+
+interface Rectangle extends Shape{
     width: number,
-    height: number,
-    computeArea: () => number
+    height: number
 }
 
 function newRectangle(width: number, height: number): Rectangle {

@@ -1,4 +1,10 @@
-function circle(radius: number): Shape {
+import {Shape} from "./shape.js"
+
+interface Circle extends Shape{
+    radius: number
+}
+
+function newCircle(radius: number): Circle {
     return {
         radius,
         computeArea: function (): number {
@@ -7,4 +13,4 @@ function circle(radius: number): Shape {
     }
 }
 
-export { circle }
+export { Circle, newCircle }
